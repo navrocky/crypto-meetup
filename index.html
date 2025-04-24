@@ -222,20 +222,6 @@ passwordHash = md5(salt + password)
               находится в конфигурационных файлах.
             </aside>
           </section>
-          <section>
-            <h3>HMAC</h3>
-            <p>Аналог цифровой подписи данных с использование ХЭШ функции.</p>
-            <p>HMAC-MD5, HMAC-SHA1, HMAC-RIPEMD128, HMAC-RIPEMD160 и т. п.</p>
-            <p>Примитивная реализация:</p>
-            <pre>
-              <code>secretKey = "secret"
-hmac = md5(secretKey + data)
-</code></pre>
-            <aside class="notes">
-              Реальный алгоритм сложнее но суть такая же. Это симметричная
-              подпись, обоим участникам необходимо знать секретный ключ.
-            </aside>
-          </section>
         </section>
         <!-- Шифрование -->
         <section>
@@ -352,15 +338,12 @@ hmac = md5(secretKey + data)
             <h3>Цифровая подпись (ЭЦП)</h3>
             <ul>
               <li>Проверка подлинности подписанного документа</li>
-              <li>Ассиметричные крипто-алгоритмы</li>
-              <li>Открытый и закрытый ключ</li>
+              <li>Ассиметричные крипто-алгоритмы (Открытый и закрытый ключ)</li>
               <li>Подписывается не сам документ а его ХЭШ</li>
-              
             </ul>
             <aside class="notes">
               DSA или ECDSA. <br /><br />
               Подпись закрытым, проверка открытым, отличие от шифрования.<br /><br />
-              
             </aside>
           </section>
           <section>
@@ -385,7 +368,6 @@ hmac = md5(secretKey + data)
             <ul>
               <li>Сырая подпись</li>
               <li>CMS (Cryptographic Message Syntax, PKCS#7)</li>
-              <li>SMIME (Secure / Multipurpose Internet Mail Extensions)</li>
               <li>CADES (CMS Advanced Electronic Signature)</li>
               <li>XMLDSig</li>
             </ul>
